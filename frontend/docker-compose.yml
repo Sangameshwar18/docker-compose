@@ -2,7 +2,7 @@ version: '3.9'
 services:
   website:
     image: sangameshwar18/flight-search-frontend
-  ports:
-    - "80:3000"
-  environment:
-    - REACT_APP_URL=http://localhost:8089
+    ports:
+      - "80:3000"
+    environment:
+      - REACT_APP_URL=http://localhost:8089
