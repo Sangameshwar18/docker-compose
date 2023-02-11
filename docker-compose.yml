@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   discovery-server:
-    image: sangameshwar18/discovery-server
+    image: sangameshwar18/discovery-server:1.0.0
     ports:
       - "8761:8761"
 
@@ -46,7 +46,7 @@ services:
       - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
 
   api-gateway:
-    image: sangameshwar18/gateway-microservice
+    image: sangameshwar18/gateway-microservice:1.0.0
     ports:
       - "80:8089"
     environment:
