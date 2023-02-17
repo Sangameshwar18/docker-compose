@@ -1,12 +1,12 @@
 version: '3.9'
 services:
   discovery-server:
-    image: sangameshwar18/discovery-server:1.0.0
+    image: sangameshwar18/discovery-server
     ports:
       - "8761:8761"
 
   search-service:
-    image: sangameshwar18/flight-search-microservice:1.0.0
+    image: sangameshwar18/flight-search-microservice
     ports:
       - "8090:8090"
     environment:
@@ -16,7 +16,7 @@ services:
       - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
 
   booking-service:
-    image: sangameshwar18/booking-service:1.0.0
+    image: sangameshwar18/booking-service
     ports:
       - "8060:8060"
     environment:
@@ -26,7 +26,7 @@ services:
       - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
 
   fare-service:
-    image: sangameshwar18/fare-service:1.0.0
+    image: sangameshwar18/fare-service
     ports:
       - "8081:8081"
     environment:
@@ -36,7 +36,7 @@ services:
       - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
 
   user-service:
-    image: sangameshwar18/user-service:1.0.0
+    image: sangameshwar18/user-service
     ports:
       - "8099:8099"
     environment:
@@ -46,7 +46,7 @@ services:
       - eureka.client.service-url.defaultZone=http://discovery-server:8761/eureka
 
   api-gateway:
-    image: sangameshwar18/gateway-microservice:1.0.0
+    image: sangameshwar18/gateway-microservice
     ports:
       - "80:8089"
     environment:
